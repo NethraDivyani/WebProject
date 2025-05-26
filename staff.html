@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RAGE Staff Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="css/Admin.css">
+
+  <style>
+    @charset "utf-8";
+    /* CSS Document */
+    
+    html, body {
+      height: 100%; /* Make sure the html and body take full height */
+      margin: 0;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8; /* Light background */
+      display: flex; /* Use flexbox for layout */
+      flex-direction: column; /* Arrange children in a column */
+    }
+    
+    .header {
+      background-color: #b9ec6c; /* Header color */
+      color: #000; /* Changed to black */
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+    
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .title span {
+      color: #E74C3C; /* Accent color */
+    }
+    
+    .nav-bar ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-bar ul li {
+      margin-left: 20px;
+    }
+    
+    .nav-bar ul li a {
+      text-decoration: none;
+      color: #000; /* Changed to black */
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-bar ul li a:hover {
+      color: #E74C3C; /* Accent color on hover */
+    }
+    
+    .btn {
+      margin-left: 20px;
+    }
+    
+    .btn a {
+      text-decoration: none;
+      color: #000; /* Changed to black */
+      background-color: #E74C3C; /* Accent color */
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .btn a:hover {
+      background-color: #C0392B; /* Darker shade on hover */
+    }
+    
+    .container {
+      padding: 100px 20px 20px; /* Added padding for top space */
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+      flex: 1; /* Allow the container to grow and take up available space */
+    }
+    
+    .home .title-1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin: 0;
+    }
+    
+    .home .title-1 span {
+      color: #E74C3C; /* Accent color */
+    }
+    
+    .shop-button {
+      background-color: #E74C3C; /* Accent color */
+      border: none;
+      color: #fff; /* Keep button text white for contrast */
+      padding: 15px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 20px; /* Added margin for spacing */
+    }
+    
+    .shop-button:hover {
+      background-color: #C0392B; /* Darker shade for hover effect */
+    }
+    
+    footer {
+      background-color: #b9ec6c; /* Footer color */
+      color: #000; /* Changed to black */
+      padding: 20px;
+      text-align: center;
+    }
+    
+    footer p {
+      margin: 0;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .nav-bar ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+    
+      .nav-bar ul li {
+        margin: 10px 0;
+      }
+    
+      .btn {
+        margin: 20px 0 0;
+      }
+    
+      .container {
+        padding: 80px 20px 20px;
+      }
+    
+      .home .title-1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title"><span>RAGE</span> Staff Dashboard</h1>
+  </div>
+  <div class="sidebar">
+    <h1>Dashboard</h1>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Product Management</a></li>
+      <li><a href="./view_reservation.php">Reservation Management</a></li>
+      <li><a href="./view_contact.php">Contact Messages</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="Login.php">Logout</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2>Welcome to RAGE!</h2>
+    <p>Manage your tasks and keep track of customer reservations effectively.</p>
+  </div>
+</body>
+</html>

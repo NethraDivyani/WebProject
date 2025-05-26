@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAGE Shoes - Products</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to your CSS file -->
+    <style>
+        @charset "utf-8";
+        /* CSS Document */
+        
+        html, body {
+          height: 100%; /* Make sure the html and body take full height */
+          margin: 0;
+        }
+        
+        body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f0f4f8; /* Light background */
+          display: flex; /* Use flexbox for layout */
+          flex-direction: column; /* Arrange children in a column */
+        }
+        
+        .header {
+          background-color: #b9ec6c; /* Header color */
+          color: #000; /* Changed to black */
+          padding: 15px 20px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1000;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        
+        .nav-bar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        
+        .title {
+          font-size: 2rem;
+          font-weight: bold;
+          margin: 0;
+        }
+        
+        .title span {
+          color: #E74C3C; /* Accent color */
+        }
+        
+        .nav-bar ul {
+          display: flex;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        
+        .nav-bar ul li {
+          margin-left: 20px;
+        }
+        
+        .nav-bar ul li a {
+          text-decoration: none;
+          color: #000; /* Changed to black */
+          font-size: 1rem;
+          font-weight: 500;
+          transition: color 0.3s;
+        }
+        
+        .nav-bar ul li a:hover {
+          color: #E74C3C; /* Accent color on hover */
+        }
+        
+        .container {
+          padding: 100px 20px 20px; /* Added padding for top space */
+          max-width: 1200px;
+          margin: 0 auto;
+          text-align: center;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+          flex: 1; /* Allow the container to grow and take up available space */
+        }
+
+        .product {
+            border: 1px solid #E74C3C; /* Accent color border */
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 15px;
+            transition: box-shadow 0.3s;
+        }
+
+        .product:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+        }
+
+        .product h3 {
+            color: #333;
+        }
+
+        .product p {
+            color: #555; /* Slightly darker text for contrast */
+        }
+
+        footer {
+          background-color: #b9ec6c; /* Footer color */
+          color: #000; /* Changed to black */
+          padding: 20px;
+          text-align: center;
+        }
+        
+        footer p {
+          margin: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          .nav-bar {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        
+          .nav-bar ul {
+            flex-direction: column;
+            margin-top: 10px;
+          }
+        
+          .nav-bar ul li {
+            margin: 10px 0;
+          }
+        
+          .container {
+            padding: 80px 20px 20px;
+          }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="nav-bar">
+        <h1 class="title"><span>RAGE</span> Shoes</h1>
+        <ul class="page">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+    <h2>Our Products</h2>
+
+    <div class="product">
+        <h3>Product 1: RAGE Running Shoes</h3>
+        <p>Description: Lightweight running shoes designed for speed and comfort.</p>
+        <p>Price: $79.99</p>
+    </div>
+
+    <div class="product">
+        <h3>Product 2: RAGE Casual Sneakers</h3>
+        <p>Description: Stylish sneakers for everyday wear, blending comfort with fashion.</p>
+        <p>Price: $59.99</p>
+    </div>
+
+    <div class="product">
+        <h3>Product 3: RAGE Sports Sandals</h3>
+        <p>Description: Durable sandals for outdoor adventures and warm-weather activities.</p>
+        <p>Price: $49.99</p>
+    </div>
+
+    <div class="product">
+        <h3>Product 4: RAGE High-Top Sneakers</h3>
+        <p>Description: Classic high-top sneakers that offer style and support.</p>
+        <p>Price: $69.99</p>
+    </div>
+
+    <div class="product">
+        <h3>Product 5: RAGE Slip-On Loafers</h3>
+        <p>Description: Comfortable slip-on loafers for a casual yet polished look.</p>
+        <p>Price: $55.99</p>
+    </div>
+    
+    <!-- Add more products as needed -->
+</div>
+
+<footer>
+    <p>&copy; 2024 RAGE Shoes. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

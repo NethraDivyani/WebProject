@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAGE Shoes - Stores</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to your CSS file -->
+    <style>
+        @charset "utf-8";
+        /* CSS Document */
+        
+        html, body {
+          height: 100%; /* Make sure the html and body take full height */
+          margin: 0;
+        }
+        
+        body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f0f4f8; /* Light background */
+          display: flex; /* Use flexbox for layout */
+          flex-direction: column; /* Arrange children in a column */
+        }
+        
+        .header {
+          background-color: #b9ec6c; /* Header color */
+          color: #000; /* Changed to black */
+          padding: 15px 20px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1000;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        
+        .nav-bar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        
+        .title {
+          font-size: 2rem;
+          font-weight: bold;
+          margin: 0;
+        }
+        
+        .title span {
+          color: #E74C3C; /* Accent color */
+        }
+        
+        .nav-bar ul {
+          display: flex;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        
+        .nav-bar ul li {
+          margin-left: 20px;
+        }
+        
+        .nav-bar ul li a {
+          text-decoration: none;
+          color: #000; /* Changed to black */
+          font-size: 1rem;
+          font-weight: 500;
+          transition: color 0.3s;
+        }
+        
+        .nav-bar ul li a:hover {
+          color: #E74C3C; /* Accent color on hover */
+        }
+        
+        .container {
+          padding: 100px 20px 20px; /* Added padding for top space */
+          max-width: 1200px;
+          margin: 0 auto;
+          text-align: center;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+          flex: 1; /* Allow the container to grow and take up available space */
+        }
+        
+        .store {
+          margin-bottom: 20px; /* Add space between store entries */
+        }
+        
+        footer {
+          background-color: #b9ec6c; /* Footer color */
+          color: #000; /* Changed to black */
+          padding: 20px;
+          text-align: center;
+        }
+        
+        footer p {
+          margin: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          .nav-bar {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        
+          .nav-bar ul {
+            flex-direction: column;
+            margin-top: 10px;
+          }
+        
+          .nav-bar ul li {
+            margin: 10px 0;
+          }
+        
+          .container {
+            padding: 80px 20px 20px;
+          }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="nav-bar">
+        <h1 class="title"><span>RAGE</span> Shoes</h1>
+        <ul class="page">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="stores.html">Stores</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+    <h2>Find Our Stores</h2>
+
+    <div class="store">
+        <h3>Store 1: RAGE Shoes - Downtown</h3>
+        <p>Address: 123 Main Street, Downtown City</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Hours: Mon-Sat: 10 AM - 8 PM, Sun: Closed</p>
+    </div>
+
+    <div class="store">
+        <h3>Store 2: RAGE Shoes - Uptown</h3>
+        <p>Address: 456 Elm Street, Uptown City</p>
+        <p>Phone: (987) 654-3210</p>
+        <p>Hours: Mon-Sat: 10 AM - 8 PM, Sun: 11 AM - 5 PM</p>
+    </div>
+
+    <div class="store">
+        <h3>Store 3: RAGE Shoes - Suburbia</h3>
+        <p>Address: 789 Oak Avenue, Suburbia</p>
+        <p>Phone: (555) 123-4567</p>
+        <p>Hours: Mon-Sat: 9 AM - 9 PM, Sun: 10 AM - 6 PM</p>
+    </div>
+
+    <!-- Add more stores as needed -->
+</div>
+
+<footer>
+    <p>&copy; 2024 RAGE Shoes. All rights reserved.</p>
+    
+</footer>
+
+</body>
+</html>

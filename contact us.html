@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAGE Shoes - Contact Us</title>
+    <link rel="stylesheet" href="css/ContactUs.css">
+
+    <style>
+        @charset "utf-8";
+        /* CSS Document */
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8; /* Light background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Full height for the body */
+        }
+
+        .header {
+            background-color: #b9ec6c; /* Header color */
+            color: #000; /* Changed to black */
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .title span {
+            color: #E74C3C; /* Accent color */
+        }
+
+        .page {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .page li {
+            margin-left: 20px;
+        }
+
+        .page li a {
+            text-decoration: none;
+            color: #000; /* Changed to black */
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .page li a:hover {
+            color: #E74C3C; /* Accent color on hover */
+        }
+
+        .container {
+            padding: 100px 20px 20px; /* Added padding for top space */
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1; /* Allow the container to grow and take up available space */
+            text-align: center;
+        }
+
+        .contact-us {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-us h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-us p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-us form {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .contact-us label {
+            font-size: 1rem;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .contact-us textarea,
+        .contact-us input {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .contact-us textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .contact-us button {
+            background-color: #E74C3C; /* Accent color */
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-us button:hover {
+            background-color: #C0392B; /* Darker shade on hover */
+        }
+
+        footer {
+            background-color: #b9ec6c; /* Footer color */
+            color: #000; /* Changed to black */
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .contact-info {
+            margin-bottom: 20px;
+        }
+
+        footer .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        footer .contact-info p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px;
+            }
+
+            .nav-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .title {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 80px 10px 20px;
+            }
+
+            .contact-us {
+                padding: 15px;
+            }
+
+            .contact-us textarea {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-bar">
+            <h1 class="title"><span>RAGE</span> Shoes</h1>
+            <ul class="page">
+                <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="stores.html">Stores</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="contact-us">
+            <h2>Contact Us</h2>
+            <p>For any inquiries or feedback, reach out to us:</p>
+            <form action="submit_query.php" method="post">
+                <label for="query">Query:</label>
+                <textarea id="query" name="query" required></textarea>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit Query</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Address: 456 Sole Street, Shoe District, Colombo, 90100</p>
+            <p>Phone: +94 123456789</p>
+            <p>Email: support@rageshoes.com</p>
+        </div>
+        <br>
+        <p>&copy; 2024 RAGE Shoes. All rights reserved.</p>
+    </footer>
+</body>
+</html>

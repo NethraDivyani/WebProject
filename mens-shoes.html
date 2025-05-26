@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RAGE - Men's Shoe Collection</title>
+  <link rel="stylesheet" href="css/MenuStyle.css">
+  <script src="js/Script.js" defer></script>
+  <style>
+    /* CSS Styling */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background-color: #b9ec6c;
+      color: #000;
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .title span {
+      color: #E74C3C;
+    }
+
+    .nav-bar ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-bar ul li {
+      margin-left: 20px;
+    }
+
+    .nav-bar ul li a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-bar ul li a:hover {
+      color: #E74C3C;
+    }
+
+    .container {
+      padding: 100px 20px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex: 1;
+    }
+
+    .filter-wrapper {
+      margin-bottom: 20px;
+    }
+
+    .filter_button button {
+      margin: 0 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      background-color: #E74C3C;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .filter_button button:hover {
+      background-color: #C0392B;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .itemBox {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      margin: 15px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 200px;
+    }
+
+    .itemBox img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .item-title {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+    }
+
+    .item-price {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    footer {
+      background-color: #b9ec6c;
+      color: #000;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-bar">
+      <h1 class="title">RAGE <span>Men's Collection</span></h1>
+      <ul class="page">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="stores.html">Stores</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="filter-wrapper">
+      <h2>Shop Men's Shoes</h2>
+      <div class="filter_button">
+        <button onclick="filterItems('all')">All</button>
+        <button onclick="filterItems('mens')">Men's Shoes</button>
+        <button onclick="filterItems('womens')">Women's Shoes</button>
+        <button onclick="filterItems('kids')">Kids' Shoes</button>
+      </div>
+    </div>
+
+    <div class="menu">
+      <!-- Men's shoes -->
+      <div class="itemBox mens">
+        <img src="sneaker 01.jfif" alt="Men's Shoe 1">
+        <div class="item-body">
+          <h3 class="item-title">Stylish Sneakers</h3>
+          <p class="item-price">$59.99</p>
+        </div>
+      </div>
+      <div class="itemBox mens">
+        <img src="c loafs.jfif" alt="Men's Shoe 2">
+        <div class="item-body">
+          <h3 class="item-title">Classic Loafers</h3>
+          <p class="item-price">$79.99</p>
+        </div>
+      </div>
+      <div class="itemBox mens">
+        <img src="oxford.jfif" alt="Men's Shoe 3">
+        <div class="item-body">
+          <h3 class="item-title">Oxfords</h3>
+          <p class="item-price">$99.99</p>
+        </div>
+      </div>
+      <!-- Other categories -->
+      <div class="itemBox womens">
+        <img src="loafers.jfif" alt="Women's Shoe">
+        <div class="item-body">
+          <h3 class="item-title">Ladies Loafers</h3>
+          <p class="item-price">$179.99</p>
+        </div>
+      </div>
+      <div class="itemBox kids">
+        <img src="kids.jfif" alt="Kids' Shoe 1">
+        <div class="item-body">
+          <h3 class="item-title">Kids Sneakers</h3>
+          <p class="item-price">$19.99</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 RAGE Shoe Collection. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterItems(category) {
+      const items = document.querySelectorAll('.itemBox');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

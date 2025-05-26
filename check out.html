@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - RAGE Shoe Shop</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8; /* Light background */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Arrange children in a column */
+            min-height: 100vh; /* Ensure full height */
+            margin: 0;
+            padding: 0 20px; /* Side padding */
+        }
+
+        .header {
+            background-color: #b9ec6c; /* Header color */
+            color: #000; /* Changed to black */
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .container {
+            padding: 80px 20px 20px; /* Padding for top space */
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+
+        footer {
+            background-color: #b9ec6c; /* Footer color */
+            color: #000; /* Changed to black */
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Ensure footer stays at the bottom */
+        }
+        
+        .basket-items {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .total-price {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        button {
+            background-color: #E74C3C; /* Accent color */
+            color: #fff; /* Keep button text white for contrast */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px; /* Margin for spacing */
+        }
+
+        button:hover {
+            background-color: #C0392B; /* Darker shade for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>RAGE Shoe Shop</h1>
+    </div>
+
+    <div class="container" id="checkout-container" style="display:none;">
+        <h2>Checkout</h2>
+        <ul class="basket-items">
+            <!-- JavaScript will populate this list -->
+        </ul>
+        <p class="total-price">Total: LKR 0.00</p>
+        <button id="confirm-order">Confirm Order</button>
+        <button onclick="window.history.back()">Go Back</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 RAGE Shoes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // This function is called when the checkout page loads
+        window.onload = function() {
+            // Check if checkout container should be displayed
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('checkout')) {
+                document.getElementById('checkout-container').style.display = 'block';
+                const basket = JSON.parse(localStorage.getItem('basket')) || [];
+                let totalPrice = 0;
+
+                const basketItemsContainer = document.querySelector('.basket-items');
+                basketItemsContainer.innerHTML = ''; // Clear previous items
+
+                basket.forEach((basketItem) => {
+                    const li = document.createElement('li');
+                    li.textContent = `${basketItem.item} - LKR ${basketItem.price.toFixed(2)}`;
+                    basketItemsContainer.appendChild(li);
+                    totalPrice += basketItem.price;
+                });
+
+                document.querySelector('.total-price').textContent = `Total: LKR ${totalPrice.toFixed(2)}`;
+            }
+        };
+
+        // Confirm order button functionality
+        document.getElementById('confirm-order').onclick = function() {
+            // Here you can handle the order confirmation (e.g., send to server)
+            alert('Order confirmed! Thank you for your purchase.');
+        };
+    </script>
+</body>
+</html>

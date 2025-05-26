@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAGE Shoe Shop - Admin Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="css/admin.css">
+
+  <style>
+    @charset "utf-8";
+    /* CSS Document */
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e9ecef; /* Light gray background */
+    }
+
+    .header {
+      background-color: #007BFF; /* Blue background */
+      color: #fff;
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .header .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .header .title span {
+      color: #FFC107; /* Yellow accent */
+    }
+
+    .sidebar {
+      background-color: #343a40; /* Dark gray */
+      color: #fff;
+      width: 250px;
+      height: 100%;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+    }
+
+    .sidebar h1 {
+      font-size: 1.5rem;
+      color: #FFC107; /* Yellow accent */
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #FFC107; /* Yellow accent on hover */
+      color: #343a40; /* Dark gray text */
+    }
+
+    .sidebar ul li a.active {
+      background-color: #FFC107; /* Active state */
+      color: #343a40; /* Dark gray text */
+    }
+
+    .content {
+      margin-top: 80px; /* Adjust for header */
+      margin-left: 250px; /* Sidebar width */
+      padding: 20px;
+      flex: 1;
+      background-color: #fff;
+      justify-content: center;
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      display: flex; /* Enable flexbox */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      height: calc(100vh - 80px); /* Full height minus header */
+      justify-content: center; /* Center items vertically */
+    }
+
+    .content h2 {
+      color: #007BFF; /* Blue for headings */
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 1rem;
+      color: #666;
+      text-align: center; /* Center text */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header {
+        padding: 10px;
+      }
+
+      .header .title {
+        font-size: 1.5rem;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .sidebar ul li {
+        margin-bottom: 0;
+      }
+
+      .sidebar ul li a {
+        padding: 10px;
+        border-radius: 0;
+      }
+
+      .content {
+        margin-left: 0;
+        margin-top: 60px; /* Adjust for header */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title"><span>RAGE</span> Shoe Shop</h1>
+  </div>
+  <div class="sidebar">
+    <h1>Admin Dashboard</h1>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Product Management</a></li>
+      <li><a href="#">Order Management</a></li>
+      <li><a href="#">Customer Inquiries</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="Login.php">Logout</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2>Welcome, Admin!</h2>
+    <p>Manage the RAGE Shoe Shop with ease.</p>
+  </div>
+</body>
+</html>

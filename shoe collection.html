@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RAGE - Shoe Collection</title>
+  <link rel="stylesheet" href="css/MenuStyle.css">
+  <script src="js/Script.js" defer></script>
+  <style>
+    @charset "utf-8";
+    
+    html, body {
+      height: 100%; /* Make sure the html and body take full height */
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8; /* Light background */
+      display: flex; /* Use flexbox for layout */
+      flex-direction: column; /* Arrange children in a column */
+    }
+
+    .header {
+      background-color: #b9ec6c; /* Header color */
+      color: #000; /* Changed to black */
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .title span {
+      color: #E74C3C; /* Accent color */
+    }
+
+    .nav-bar ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-bar ul li {
+      margin-left: 20px;
+    }
+
+    .nav-bar ul li a {
+      text-decoration: none;
+      color: #000; /* Changed to black */
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-bar ul li a:hover {
+      color: #E74C3C; /* Accent color on hover */
+    }
+
+    .container {
+      padding: 100px 20px 20px; /* Added padding for top space */
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+      flex: 1; /* Allow the container to grow and take up available space */
+    }
+
+    .filter-wrapper {
+      margin-bottom: 20px;
+    }
+
+    .filter_button button {
+      margin: 0 5px; /* Add spacing between buttons */
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      background-color: #E74C3C; /* Accent color */
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .filter_button button:hover {
+      background-color: #C0392B; /* Darker shade on hover */
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .itemBox {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      margin: 15px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      width: 200px; /* Fixed width for consistency */
+    }
+
+    .itemBox img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .item-title {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+    }
+
+    .item-price {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .add-to-basket {
+      background-color: #E74C3C; /* Accent color */
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 10px; /* Space between price and button */
+    }
+
+    .add-to-basket:hover {
+      background-color: #C0392B; /* Darker shade on hover */
+    }
+
+    footer {
+      background-color: #b9ec6c; /* Footer color */
+      color: #000; /* Changed to black */
+      padding: 20px;
+      text-align: center;
+      margin-top: auto; /* Push the footer to the bottom */
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-bar ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .nav-bar ul li {
+        margin: 10px 0;
+      }
+
+      .container {
+        padding: 80px 20px 20px;
+      }
+
+      .home .title-1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-bar">
+      <h1 class="title">RAGE <span>Shoe Collection</span></h1>
+      <ul class="page">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="stores.html">Stores</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact</a></li>
+      </ul>
+    </div>
+    <script src="js/cart.js" defer></script>
+  </header>
+
+  <div class="container">
+    <div class="filter-wrapper">
+      <h2>Shop Our Collection</h2>
+      <div class="filter_button">
+        <div class="filter_button">
+            <button onclick="window.location.href='shoe collection.html'" class="filter-active">All</button>
+            <button onclick="window.location.href='mens-shoes.html'">Men's Shoes</button>
+            <button onclick="window.location.href='womens-collection.html'">Women's Shoes</button>
+            <button onclick="window.location.href='kids-collection.html'">Kids' Shoes</button>
+          </div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="itemBox" data-name="Stylish Sneakers">
+        <img src="sneaker 01.jfif" alt="Shoe 1">
+        <div class="item-body">
+          <h3 class="item-title">Stylish Sneakers</h3>
+          <p class="item-price">$59.99</p>
+          <button class="add-to-basket" data-item="Stylish Sneakers" data-price="59.99">Order now</button>
+        </div>
+      </div>
+      <div class="itemBox" data-name="Classic Loafers">
+        <img src="c loafs.jfif" alt="Shoe 2">
+        <div class="item-body">
+          <h3 class="item-title">Classic Loafers</h3>
+          <p class="item-price">$79.99</p>
+          <button class="add-to-basket" data-item="Classic Loafers" data-price="79.99">Order now</button>
+        </div>
+      </div>
+      <div class="itemBox" data-name="Oxwords">
+        <img src="oxford.jfif" alt="Shoe 3">
+        <div class="item-body">
+          <h3 class="item-title">Oxwords</h3>
+          <p class="item-price">$99.99</p>
+          <button class="add-to-basket" data-item="Oxwords" data-price="99.99">Order now</button>
+        </div>
+      </div>
+      <div class="itemBox" data-name="Ladies Loafers">
+        <img src="loafers.jfif" alt="Shoe 4">
+        <div class="item-body">
+          <h3 class="item-title">Ladies Loafers</h3>
+          <p class="item-price">$179.99</p>
+          <button class="add-to-basket" data-item="Ladies Loafers" data-price="179.99">Order now</button>
+        </div>
+      </div>
+      <div class="itemBox" data-name="Ladies Boots">
+        <img src="boots3.jfif" alt="Shoe 5">
+        <div class="item-body">
+          <h3 class="item-title">Ladies Boots</h3>
+          <p class="item-price">$129.99</p>
+          <button class="add-to-basket" data-item="Ladies Boots" data-price="129.99">Order now</button>
+        </div>
+      </div>
+      <div class="itemBox" data-name="Stylish High Heels">
+        <img src="high heels.png" alt="Shoe 6">
+        <div class="item-body">
+          <h3 class="item-title">Stylish High Heels</h3>
+          <p class="item-price">$159.99</p>
+          <button class="add-to-basket" data-item="Stylish High Heels" data-price="159.99">Order now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="basket">
+    <h2>Basket</h2>
+    <ul class="basket-items">
+    </ul>
+    <p class="total-price">Total: LKR 0.00</p>
+    <a href="check out.html" class="checkout-button">Go to Checkout</a>
+  </div>
+</div>
+  <footer>
+    <p>&copy; 2024 RAGE Shoes. All rights reserved.</p>
+  </footer>
+</body>
+</html>
